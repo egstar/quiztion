@@ -2,12 +2,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min'
 import './Utilities/css/style.css'
 import { Link } from 'react-router-dom'
-import Home from './Pages/Index/index';
-import Login from './Pages/Login/index';
-import Profile from './Pages/Profile/index';
-import Admin from './Pages/Admin/index';
-import Quiz from './Pages/Quiz/index';
-import Signup from './Pages/Signup/index';
 import React from 'react'
 const Header = () => {
     const [activate, isActive] = React.useState(false)
@@ -18,7 +12,7 @@ const Header = () => {
         <>
             <nav className="navbar navbar-expand-sm navbar-light sticky-top">
                 <div className="container-fluid">
-                    <Link to={<Home />} className="navbar-brand"><span className="QuiztionPart1"><h1 className="d-inline QuiztionPart2">Q</h1><h2 className='d-inline'>UIZ</h2></span><h2 className="d-inline">TION</h2></Link>
+                    <Link to="/" className="navbar-brand"><span className="QuiztionPart1"><h1 className="d-inline QuiztionPart2">Q</h1><h2 className='d-inline'>UIZ</h2></span><h2 className="d-inline">TION</h2></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -30,28 +24,28 @@ const Header = () => {
                         <div className="offcanvas-body">
                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li className="nav-item">
-                                <Link to={<Home />}  className={activate? 'nav-link active': 'nav-link'} aria-current="page" onClick={setActive}>Home</Link>
+                                <Link to="/"  className={activate? 'nav-link active': 'nav-link'} aria-current="page" onClick={setActive}>Home</Link>
                             </li>
                             <li className="nav-item dropdown">
-                                <Link to={<Profile />}  className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <Link to="/profile"  className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Dashboards
                                 </Link>
                                 <ul className="dropdown-menu dropdown-menu-light">
-                                    <li><Link to={<Quiz />}  className="dropdown-item">Quiz</Link></li>
+                                    <li><Link to="/quiz"  className="dropdown-item">Quiz</Link></li>
                                     <li>
                                         <hr className="dropdown-divider" />
                                     </li>
-                                    <li><Link to={<Admin />}  className="dropdown-item">Admin</Link></li>
+                                    <li><Link to="/admin"  className="dropdown-item">Admin</Link></li>
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <Link to={<Signup />}  className="nav-link">Sign Up</Link>
+                                <Link to="/signup" className="nav-link">Sign Up</Link>
                             </li>
                             <li>
                                 <hr className="dropdown-divider" />
                             </li>
                             <li className="nav-item">
-                                <Link to={<Login />}  className="nav-link" aria-current="page">Sign in</Link>
+                                <Link to="/login"  className="nav-link" aria-current="page">Sign in</Link>
                             </li>
                             <li>
                                 <hr className="nav-divider" />
