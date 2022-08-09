@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {BrowserRouter, Route, Routes, HashRouter} from 'react-router-dom';
+import { Route, Routes, HashRouter} from 'react-router-dom';
 import Layout from './Components/Layout';
+import Error from './Components/Error';
 import Home from './Components/Pages/Index/index';
 import Login from './Components/Pages/Login/index';
 import Profile from './Components/Pages/Profile/index';
 import Admin from './Components/Pages/Admin/index';
 import Quiz from './Components/Pages/Quiz/index';
-import Error from './Components/Error';
 import Signup from './Components/Pages/Signup/index';
 import reportWebVitals from './reportWebVitals';
 
