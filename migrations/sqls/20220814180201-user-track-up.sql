@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS user_track(
+    userid INT NOT NULL REFERENCES users(uid) ON DELETE CASCADE,
+    user_cohort INT NOT NULL REFERENCES cohort(cid) ON DELETE CASCADE,
+    user_track INT NOT NULL REFERENCES track(tid) ON DELETE SET NULL
+)

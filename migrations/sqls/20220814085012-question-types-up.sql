@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS question_type(
+    qtid SERIAL PRIMARY KEY,
+    qtype VARCHAR(100) NOT NULL UNIQUE
+)

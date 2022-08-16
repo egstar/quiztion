@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS cohort(
+    cid SERIAL PRIMARY KEY NOT NULL,
+    cohort VARCHAR(250) NOT NULL,
+    start_at DATE NOT NULL,
+    end_by DATE
+)

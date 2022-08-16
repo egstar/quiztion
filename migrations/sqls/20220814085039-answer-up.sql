@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS answer(
+    aid SERIAL PRIMARY KEY NOT NULL,
+    questid INT NOT NULL REFERENCES question(qqid) ON DELETE CASCADE,
+    answer TEXT NOT NULL,
+    answer_type BOOLEAN NOT NULL
+)

@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS quiz_quests(
+    quizid INT NOT NULL REFERENCES quiz(qid) ON DELETE CASCADE,
+    q_qqid INT NOT NULL REFERENCES question(qqid) ON DELETE CASCADE
+)

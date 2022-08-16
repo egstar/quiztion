@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS question(
+    qqid SERIAL PRIMARY KEY not null,
+    question TEXT NOT NULL,
+    qqdegree INT NOT NULL,
+    qqtype INT NOT NULL DEFAULT 1 REFERENCES question_type(qtid) ON DELETE SET DEFAULT,
+    created_by INT NOT NULL DEFAULT 1 REFERENCES users(uid) ON DELETE SET DEFAULT,
+    create_at DATE NOT NULL DEFAULT CURRENT_DATE
+)
