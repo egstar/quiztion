@@ -1,8 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min'
-import './Utilities/css/style.css'
+import '../css/style.css'
 import { Link } from 'react-router-dom'
 import React from 'react'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+library.add( fas, fab, far )
+
+
 const Header = () => {
     const [activate, isActive] = React.useState(false)
     function setActive(){

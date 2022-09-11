@@ -1,3 +1,5 @@
+import { BoxView } from "../../Utilities/Addons/Box";
+
 function Quiz() {
     return (
       <>
@@ -5,7 +7,11 @@ function Quiz() {
         height:"100vh",
         alignContent: "center",
         alignItems: "center",
-      }}><h1>Quiz PAGE CONTENT</h1></div>
+      }}>
+        {BoxView(<div>
+      to add content here
+    </div>)}
+      </div>
       </>
     );
   }

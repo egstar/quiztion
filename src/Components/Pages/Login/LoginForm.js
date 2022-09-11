@@ -1,10 +1,12 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 
 export function LoginFormFunction() {
     const [username, setUsername] = React.useState('')
     const [password, setPassword] = React.useState('')
     const [staylogged, StayLogged] = React.useState(false)
+    const [showPassword, setToShow] = React.useState(false)
     function handleStayLogged(){
         StayLogged(!staylogged);
     }
@@ -14,17 +16,21 @@ export function LoginFormFunction() {
     function handlePassword(e){
         setPassword(e.target.value)
     }
-    return <div>    
-    <h1 className="LoginFormText">USER LOGIN</h1>
-    <hr style={{paddingBottom:"2rem"}}/>
+    function handleShow(){
+        setToShow(!showPassword)
+    }
+    return <div className="m-auto">    
+
     <form className="needs-validation">
         <div className="form-floating text-start mb-3">
             <input id="userName" type="text" className="form-control form-control-lg" maxLength="30" value={username} onChange={handleUsername} placeholder="Enter your user name" required />
             <label htmlFor="userName">Username</label>
         </div>
         <div className="form-floating  text-start  mb-3">
-                <input id="passWord" className="form-control form-control-lg" maxLength="20" value={password} onChange={handlePassword} type="password" placeholder="Enter your Password" required />
+                <input id="passWord" className="form-control form-control-lg" maxLength="20" value={password} onChange={handlePassword} type={showPassword ? "text" : "password"} placeholder="Enter your Password" required />
+                <FontAwesomeIcon className={showPassword ? "fa-eye" : "fa-eye-slash"} onClick={handleShow} icon={showPassword ? "fa-eye" : "fa-eye-slash"} />
                 <label htmlFor="passWord">Password</label>
+                
         </div>
         <div className="mb-3 text-start row g-0">
                 <div className="form-check form-switch col-8">

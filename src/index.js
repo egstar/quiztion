@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Route, Routes, HashRouter} from 'react-router-dom';
-import Layout from './Components/Layout';
-import Error from './Components/Error';
+import Layout from './Components/Utilities/Addons/Layout';
+import Error from './Components/Utilities/Addons/Error';
 import Home from './Components/Pages/Index/index';
 import Login from './Components/Pages/Login/index';
 import Profile from './Components/Pages/Profile/index';
@@ -32,12 +32,7 @@ export default function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-
       <App />
-
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

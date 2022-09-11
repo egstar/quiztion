@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Abel:300,400,700&amp;display=swap");
 @import url("https://fonts.googleapis.com/css?family=Raleway:wght@400&amp;display=swap");
 @import url("https://fonts.googleapis.com/css?family=Cabin+Condensed:700");
@@ -14,20 +14,38 @@ body {
 }
 .main {
     margin:auto;
+    width:60%;
 }
-.SignupForm {
-    position:relative;
-    width:80%;
+.SideImage {
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    border:1px solid rgba(17, 17, 17, 0.25);
+    border-radius: 15px;
+    box-shadow: 2px 2px 3px 3px rgba(231, 230, 230, 0.3);
+    width:max-content;
     margin:auto;
-    box-shadow: 2px 2px 3px 3px rgba(209, 209, 209, 0.747);
-    border-radius:25px;    
 }
-.LoginForm {
+.Logo {
+    width:100%;
     position:relative;
-    width:40%;
+    display:block;
+    border-radius:2rem;
+}
+.LastQ{
+    position:relative;
     margin:auto;
+    margin-top:1rem;
     box-shadow: 2px 2px 3px 3px rgba(209, 209, 209, 0.747);
-    border-radius:25px;    
+    border-radius:25px;
+}
+.LoginForm, .SignupForm {
+    position:relative;
+    width:90%;
+    margin:auto;
+    margin-top:1rem;
+    box-shadow: 2px 2px 3px 3px rgba(209, 209, 209, 0.747);
+    border-radius:25px;
 }
 .LoginFormText {
     position: relative;
@@ -36,69 +54,61 @@ body {
     color: lightgray;
     text-shadow: -1px -1px 2px rgba(231, 230, 230, 0.1), 1px 1px 1px rgba(0,0,0,.5);
 }
-.LoginFormHead {
+.LoginFormHead, .LatestQuiz {
     display:block;
     position:relative;
     margin:auto;
     width:100%;
-    height:2.5rem;
+    height:2rem;
     border-radius:25px 25px 0 0;
     border: 2px 2px 2px 0 solid lightskyblue;
     background:linear-gradient(lightcyan,powderblue,lightcyan);
     text-align:center;
 }
-.LoginFormContent {
+.LoginFormContent, .LastQcontent {
     width:100%;
     margin: auto;
     position:relative;
 }
-.LoginFormLeft {
+.LoginFormCenter, .SignupFormCenter, .LastQcenter {
+    background:linear-gradient(180deg, lightcyan,powderblue,lightcyan);
+    margin:auto;
+    justify-content:center;
+    align-items: center;
+    text-align:center;
+    padding: 1px 0 1px 0;
+}
+.LoginFormRight, .LoginFormLeft {
     background:linear-gradient(lightcyan,powderblue,lightcyan);
+}
 
-}
-.LoginFormCenter {
-    background:linear-gradient(lightcyan,powderblue,lightcyan);
-    margin:auto;
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    text-align:center;
-    padding:0 1rem 3rem 1rem;
-}
-.SignupFormCenter{
-    background:linear-gradient(lightcyan,powderblue,lightcyan);
-    margin:auto;
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    text-align:center;
-    padding:0 1rem 3rem 1rem;
-}
-.LoginFormRight {
-    background:linear-gradient(lightcyan,powderblue,lightcyan);
-    
-}
-.LoginFormTail {
+.LoginFormTail, .LastQT {
     display:block;
     margin:auto;
     position:relative;
     width:100%;
-    height:2.5rem;
+    height:2rem;
     border-radius: 0 0 25px 25px;
     background:linear-gradient(lightcyan,powderblue,lightcyan);
-    
-
 }
 .navbar {
     background:linear-gradient(lightcyan,powderblue,lightcyan);
-
+    height:3.5rem;
 }
 .navbar-brand {
     background:transparent;
     color:lightslategray;
+    text-align:center;
+    background-image: url(../Assits/imgs/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 .navbar-brand > * {
-    font-family: 'Rowdies', sans-serif;
+    opacity:0;
+    width:100%;
+    height:3rem;
+    text-align:center;
 }
 
 .QuiztionPart1 > * {
@@ -118,21 +128,90 @@ body {
     text-align:center;
     bottom: 0px;
 }
-
+.breakBar {
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+.breakBar:after {
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    bottom:0;
+    border-left:solid 1px lightgray;
+    z-index:-1;
+}   
+.OrBar {
+    margin:0;
+    padding:20px 0;
+    background: rgba(177, 240, 240, 0.485);
+    display:inline-block;
+    color:darkslategray;
+    width:calc(max-content+1rem);
+}
+.SocialButton {
+    width:100%;
+    height:2.5rem;
+    margin:auto;
+    position:relative;
+    display:flex;
+    border-radius:5px;
+    background-color: rgb(2, 2, 43,0.75);
+    box-shadow: 1px 1px 2px 2px rgba(34, 33, 33, 0.5);
+    color:white;
+    justify-content: center;
+    text-justify: auto;
+    align-items: center;
+    font-size: 2rem;
+}
+.google {
+    background:red;
+}
+.twitter {
+    background:lightskyblue;
+}
+.SocialButton:hover {
+ opacity:.7;
+}
 
 @media screen and (max-width:600px) {
     .offcanvas {
         background:linear-gradient(lightcyan,powderblue,lightcyan);
     }
     .LoginForm {
-        width:90%;
-        
-    }
-    .SignupForm {
-        width:90%;
+        width:100%;
         
     }
     .LoginFormText {
         text-align:center;
     }
+    .main {
+        width:90%;
+    }
+    .SocialButton {
+        width:100%;
+        bottom:5px;
+    }
+    .SideImage {
+        position: relative;
+        display:block;
+    }
+    .breakBar:after {
+        content:"";
+        position:absolute;
+        top:50%;
+        left:0;
+        right:0;
+        border-top:solid 1px lightgray;
+        z-index:-1;
+    }    
+    .OrBar {
+        padding: 0 20px;
+        background: linear-gradient(rgba(210, 247, 247, 0.774),rgba(196, 247, 247, 0.603),rgba(210, 247, 247, 0.918));
+        border-radius:15px;
+    }
 }
+/*.input-text{position: relative;margin-top: 30px}*/
+.fa-eye-slash{position: absolute;right: 10px;top: 25px;font-size:15px;cursor:pointer}
+.fa-eye{position: absolute;right: 10px;top: 25px;font-size:15px;cursor:pointer}
